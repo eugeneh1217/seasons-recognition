@@ -2,6 +2,7 @@ import os
 import re
 from PIL import Image
 
+# list of pillow images
 data = []
 
 # path of current directory as string
