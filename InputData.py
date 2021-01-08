@@ -24,7 +24,11 @@ class InputData:
         self.test_y = test_y
 
     def resize(self, resolution):
-        """Normalize size of input images."""
+        """
+        Normalize size of input images.
+
+        :param resultion: tuple of two ints that specify final size of images
+        """
         for category in self.raw:
             for key in category.keys():
                 category[key] = category[key].resize(resolution)
