@@ -52,6 +52,17 @@ class InputData:
         for iteration in range(training_size):
             index = random.randrange(len(all_data))
             key = list(all_data.keys())[index]
+            self.train_y.append(key)
+            self.train_x.append(all_data[key])
+            all_data.pop(key)
+        for iteration in range(len(all_data)):
+            index = random.randrange(len(all_data))
+            key = list(all_data.keys())[index]
+            self.test_y.append(key)
+            self.test_x.append(all_data[key])
+            all_data.pop(key)
+
+
 
 
 
